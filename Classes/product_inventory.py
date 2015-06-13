@@ -3,6 +3,9 @@ Product Inventory Project -
 Create an application which manages an inventory of products. Create a product 
 class which has a price, id, and quantity on hand. Then create an inventory 
 class which keeps track of various products and can sum up the inventory value.
+
+Author: Esha Uboweja
+Date: June 13, 2015
 '''
 
 #------------------------------------------------------------------------------
@@ -30,7 +33,7 @@ class Product(object):
             raise ValueError('Price cannot be negative')
         self.price = price
 
-    def __repr__(self):
+    def __str__(self):
         return "ProductName = %s, ProductID : %d, Price : %f" \
                 % (self.name, self.pID, self.price)
 
@@ -70,7 +73,7 @@ class Inventory(object):
             value += product.price * self.inventory[product]
         return value
    
-    def __repr__(self):
+    def __str__(self):
         value = self.getInventoryValue()
         inventory_string = "Name ProductID Price Quantity\n"
         for product in self.inventory.keys():
