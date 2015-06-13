@@ -15,7 +15,7 @@ class Ingredient(object):
         self.name = name
         self.unit_of_measure = unit_of_measure
 
-def __repr__(self):
+    def __repr__(self):
         return "Name: " + self.name + ", Unit: " + self.unit_of_measure
 
 #------------------------------------------------------------------------------
